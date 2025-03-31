@@ -23,31 +23,34 @@
   height: 100vh;
   width: 100vw; /* Full viewport width */
   overflow: hidden;
-  background-color: #f9f9f9; /* Light background for the entire app */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Gradient background */
 }
 
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-arround;
+  justify-content: space-between;
   height: 8%; /* Adjust height as needed */
-  background-color: #ff4d4d; /* Bright red for the header */
+  background: linear-gradient(90deg, #ff4d4d, #f65056); /* Gradient for the header */
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for separation */
   width: 100%;
   box-sizing: border-box;
+  color: white;
 }
 
 .header-logo {
   width: 50px; /* Adjust the size of the logo */
   height: auto;
   margin-right: 15px; /* Space between logo and text */
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
 }
 
 .header h4 {
   color: white; /* White text for the header */
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
 }
 
 .main {
@@ -58,8 +61,8 @@
 }
 
 .nav-panel {
-  width: 10%;
-  background-color: #f4f4f4; /* Light gray */
+  width: 200px; /* Fixed width for the navigation panel */
+  background: linear-gradient(180deg, #f4f4f4, #e0e0e0); /* Gradient for the nav panel */
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
@@ -79,21 +82,23 @@
   cursor: pointer;
   font-size: 16px;
   color: #333; /* Dark gray text */
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-panel ul li:hover {
   color: #ff4d4d; /* Highlight color on hover */
+  transform: scale(1.1); /* Slight zoom effect */
 }
 
 .content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff; /* White background for content */
-  border-radius: 8px; /* Rounded corners for content */
+  background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Subtle gradient for content */
+  border-radius: 16px; /* Rounded corners for content */
   margin: 20px; /* Add spacing around the content */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for content */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+  animation: slideIn 1s ease-in-out; /* Slide-in animation */
 }
 
 .inner-header {
@@ -101,19 +106,16 @@
   align-items: center;
   justify-content: flex-start;
   height: 8%; /* Same height as the main header */
-  background-color: #ff4d4d; /* Same background color as the main header */
+  background: linear-gradient(90deg, #ff4d4d, #ff9a9e); /* Gradient for the inner header */
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for separation */
   box-sizing: border-box;
-  border-top-left-radius: 8px; /* Match content border radius */
-  border-top-right-radius: 8px;
-}
-
-.inner-header h4 {
-  color: white; /* White text for the inner header */
-  margin: 0;
+  border-top-left-radius: 16px; /* Match content border radius */
+  border-top-right-radius: 16px;
+  color: white;
   font-size: 18px;
   font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
 }
 
 .content-body {
@@ -124,6 +126,7 @@
   font-size: 16px;
   color: #555; /* Medium gray text */
   line-height: 1.6; /* Improve readability */
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
 }
 
 .nav-panel h5 {
@@ -138,8 +141,29 @@
   justify-content: center;
   height: 100%;
   width: 30%;
-  background-color: #ffffff; /* White background for instant rendering */
-  border-radius: 8px; /* Match content border radius */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for instant rendering */
+  background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Subtle gradient */
+  border-radius: 16px; /* Match content border radius */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
   flex-shrink: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
