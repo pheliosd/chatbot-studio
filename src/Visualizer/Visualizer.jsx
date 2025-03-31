@@ -35,6 +35,7 @@ const Visualizer = () => {
       </div>
       <div className="main">
         <div className="nav-panel">
+          <h5>Components List</h5>
           <ul>
             {loading ? (
               <div className="spinner"></div> // Show spinner while loading
@@ -52,6 +53,9 @@ const Visualizer = () => {
           <div className="content-body">
             <p>This is where you can visualize chatbot components.</p>
           </div>
+        </div>
+        <div className='instant-render'>
+          <p> instant renderring</p>
         </div>
       </div>
     </div>

@@ -29,7 +29,7 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-arround;
   height: 8%; /* Adjust height as needed */
   background-color: #ff4d4d; /* Bright red for the header */
   padding: 10px 20px;
@@ -53,6 +53,8 @@
 .main {
   display: flex;
   flex: 1;
+  overflow-y: hidden;
+  overflow-x: auto; /* Enable horizontal scrolling if content overflows */
 }
 
 .nav-panel {
@@ -61,11 +63,15 @@
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  flex-shrink: 0; /* Prevent the nav-panel from shrinking */
+  overflow-y: auto; /* Enable vertical scrolling for the nav-panel */
+  max-height: calc(100vh - 8%); /* Ensure it doesn't exceed the viewport height */
 }
 
 .nav-panel ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .nav-panel ul li {
@@ -118,4 +124,22 @@
   font-size: 16px;
   color: #555; /* Medium gray text */
   line-height: 1.6; /* Improve readability */
+}
+
+.nav-panel h5 {
+  font-size: 18px; /* Increase font size for the header */
+  color: #cc0909; /* Dark gray text */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.instant-render {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 30%;
+  background-color: #ffffff; /* White background for instant rendering */
+  border-radius: 8px; /* Match content border radius */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for instant rendering */
+  flex-shrink: 0;
 }
