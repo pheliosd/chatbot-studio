@@ -1,0 +1,121 @@
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1); /* Light gray border */
+  border-top: 4px solid #4CAF50; /* Green border for the spinner */
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* Infinite spinning animation */
+  margin: 20px auto; /* Center the spinner */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* Rotate a full circle */
+  }
+}
+
+.visualizer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw; /* Full viewport width */
+  overflow: hidden;
+  background-color: #f9f9f9; /* Light background for the entire app */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8%; /* Adjust height as needed */
+  background-color: #ff4d4d; /* Bright red for the header */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for separation */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-logo {
+  width: 50px; /* Adjust the size of the logo */
+  height: auto;
+  margin-right: 15px; /* Space between logo and text */
+}
+
+.header h4 {
+  color: white; /* White text for the header */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.nav-panel {
+  width: 10%;
+  background-color: #f4f4f4; /* Light gray */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.nav-panel ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-panel ul li {
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333; /* Dark gray text */
+  transition: color 0.3s ease;
+}
+
+.nav-panel ul li:hover {
+  color: #ff4d4d; /* Highlight color on hover */
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; /* White background for content */
+  border-radius: 8px; /* Rounded corners for content */
+  margin: 20px; /* Add spacing around the content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for content */
+}
+
+.inner-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 8%; /* Same height as the main header */
+  background-color: #ff4d4d; /* Same background color as the main header */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for separation */
+  box-sizing: border-box;
+  border-top-left-radius: 8px; /* Match content border radius */
+  border-top-right-radius: 8px;
+}
+
+.inner-header h4 {
+  color: white; /* White text for the inner header */
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.content-body {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #555; /* Medium gray text */
+  line-height: 1.6; /* Improve readability */
+}
